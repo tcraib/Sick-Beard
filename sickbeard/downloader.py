@@ -302,7 +302,7 @@ def _get_session(createIfNeeded=True):
         _lt_sess.set_upload_rate_limit(sickbeard.LIBTORRENT_MAX_UL_SPEED * 1024)
         
         settings = lt.session_settings()
-        settings.user_agent = 'sickbeard_tram-%s/%s' % (version.SICKBEARD_VERSION.replace(' ', '-'), lt.version)
+        settings.user_agent = 'sickbeard_tcraib-%s/%s' % (version.SICKBEARD_VERSION.replace(' ', '-'), lt.version)
         settings.rate_limit_utp = True # seems this is rqd, otherwise uTP connections don't obey the rate limit
         
         settings.active_downloads = 8
